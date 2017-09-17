@@ -41,3 +41,43 @@ console.log(car.acceleration);
 * Exercises 3
 *******************************/
 
+class BaseObject{ 
+    constructor(public width:number, public length:number){
+    }   
+}
+
+class Rectangle extends BaseObject{    
+    calcSize(){
+        return this.width* this.length;
+    }
+}
+
+let rectangle = new Rectangle(5,2);
+console.log(rectangle.calcSize());
+
+/*******************************
+* Exercises 4
+*******************************/
+class Person{
+   private _firstName: string;    
+   
+   get firstName(){
+        return this._firstName;
+   }
+
+   set firstName(value: string){
+        this._firstName = value;
+   }
+}
+
+let person = new Person();
+person.firstName = "Asaad";
+console.log(person.firstName);
+
+
+
+
+
+
+
+
